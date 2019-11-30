@@ -13,6 +13,8 @@
 		54558D442392443300AFAE45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54558D422392443300AFAE45 /* Main.storyboard */; };
 		54558D462392443400AFAE45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54558D452392443400AFAE45 /* Assets.xcassets */; };
 		54558D492392443400AFAE45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54558D472392443400AFAE45 /* LaunchScreen.storyboard */; };
+		54558D512392446100AFAE45 /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 54558D502392446100AFAE45 /* Location.gpx */; };
+		54558D56239249CA00AFAE45 /* WGS84TOGCJ02.m in Sources */ = {isa = PBXBuildFile; fileRef = 54558D55239249CA00AFAE45 /* WGS84TOGCJ02.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,12 @@
 		54558D452392443400AFAE45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54558D482392443400AFAE45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54558D4A2392443400AFAE45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54558D502392446100AFAE45 /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
+		54558D52239244B900AFAE45 /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Location.gpx; path = Location/Location.gpx; sourceTree = "<group>"; };
+		54558D53239249CA00AFAE45 /* Location-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Location-Bridging-Header.h"; sourceTree = "<group>"; };
+		54558D54239249CA00AFAE45 /* WGS84TOGCJ02.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGS84TOGCJ02.h; sourceTree = "<group>"; };
+		54558D55239249CA00AFAE45 /* WGS84TOGCJ02.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGS84TOGCJ02.m; sourceTree = "<group>"; };
+		54558D572392527E00AFAE45 /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Location.gpx; path = Location/Location.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +48,8 @@
 		54558D302392443300AFAE45 = {
 			isa = PBXGroup;
 			children = (
+				54558D52239244B900AFAE45 /* Location.gpx */,
+				54558D572392527E00AFAE45 /* Location.gpx */,
 				54558D3B2392443300AFAE45 /* Location */,
 				54558D3A2392443300AFAE45 /* Products */,
 			);
@@ -63,6 +73,10 @@
 				54558D452392443400AFAE45 /* Assets.xcassets */,
 				54558D472392443400AFAE45 /* LaunchScreen.storyboard */,
 				54558D4A2392443400AFAE45 /* Info.plist */,
+				54558D502392446100AFAE45 /* Location.gpx */,
+				54558D54239249CA00AFAE45 /* WGS84TOGCJ02.h */,
+				54558D55239249CA00AFAE45 /* WGS84TOGCJ02.m */,
+				54558D53239249CA00AFAE45 /* Location-Bridging-Header.h */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -99,6 +113,7 @@
 				TargetAttributes = {
 					54558D382392443300AFAE45 = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -127,6 +142,7 @@
 			files = (
 				54558D492392443400AFAE45 /* LaunchScreen.storyboard in Resources */,
 				54558D462392443400AFAE45 /* Assets.xcassets in Resources */,
+				54558D512392446100AFAE45 /* Location.gpx in Resources */,
 				54558D442392443300AFAE45 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +157,7 @@
 				54558D412392443300AFAE45 /* ViewController.swift in Sources */,
 				54558D3D2392443300AFAE45 /* AppDelegate.swift in Sources */,
 				54558D3F2392443300AFAE45 /* SceneDelegate.swift in Sources */,
+				54558D56239249CA00AFAE45 /* WGS84TOGCJ02.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +301,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CM6F9W56D9;
 				INFOPLIST_FILE = Location/Info.plist;
@@ -293,6 +311,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cxh.Location;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Location/Location-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,6 +322,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CM6F9W56D9;
 				INFOPLIST_FILE = Location/Info.plist;
@@ -311,6 +332,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cxh.Location;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Location/Location-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
